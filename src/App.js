@@ -1,4 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
+import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 import "./App.scss";
 import LogoKfc from "./assets/images/logo.png";
 import BurgerFries from "./assets/images/burger_fries.png";
@@ -21,6 +24,12 @@ import {
   Span,
   Slider,
   Slides,
+  Footer,
+  Sci,
+  PrevNext,
+  Prev,
+  Next,
+  Toggle,
 } from "./App.elements.js";
 
 const App = () => {
@@ -30,6 +39,7 @@ const App = () => {
         <Ai href="#">
           <Logo src={LogoKfc} alt="" />
         </Ai>
+        <Toggle></Toggle>
         <Navigation>
           <Li>
             <Ali href="#">Home</Ali>
@@ -59,20 +69,48 @@ const App = () => {
           <OrderNow href="#">Order Now</OrderNow>
         </Text>
         <Slider>
-          <Slides className="active">
+          <Slides className="slides active">
             <img src={BurgerFries} alt="" />
           </Slides>
-          <Slides>
+          <Slides className="slides">
             <img src={FrenchFries} alt="" />
           </Slides>
-          <Slides>
+          <Slides className="slides">
             <img src={Burger} alt="" />
           </Slides>
-          <Slides>
+          <Slides className="slides">
             <img src={FriedChicken} alt="" />
           </Slides>
         </Slider>
       </Content>
+      <Footer>
+        <Sci>
+          <li>
+            <a href="#">
+              <SiFacebook />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <SiInstagram />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <SiTwitter />
+            </a>
+          </li>
+        </Sci>
+        <PrevNext>
+          <p>Always Fresh</p>
+          <Prev>
+            <IoArrowBack />
+          </Prev>
+          <Next>
+            <IoArrowForward />
+          </Next>
+        </PrevNext>
+      </Footer>
     </Main>
   );
 };
