@@ -46,6 +46,9 @@ export const Li = styled.li`
 export const Content = styled.div`
   position: relative;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const Text = styled.div`
@@ -59,6 +62,44 @@ export const H2 = styled.h2`
   font-weight: 300;
 `;
 
-export const P = styled.p``;
+export const Span = styled.span`
+  font-weight: 700;
+`;
 
-export const OrderNow = styled.a``;
+export const P = styled.p`
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.1 em;
+  line-height: 1.5em;
+  margin: 20px 0;
+`;
+
+export const OrderNow = styled.a`
+  position: relative;
+  display: inline-block;
+  padding: 20px 50px;
+  background: #fff;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.25s;
+
+  &:hover {
+    letter-spacing: 2px;
+  }
+`;
+
+export const Slider = styled.div`
+  position: relative;
+`;
+
+export const Slides = styled.div`
+  display: none;
+
+  img {
+    width: 100%;
+    max-width: 600px;
+  }
+`;
